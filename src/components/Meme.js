@@ -63,7 +63,7 @@ export default function Meme() {
                     value={meme.bottomText}
                 />
                 <button
-                    className="form--randombutton"
+                    className="form--button"
                     onClick={getMemeImage}
                 >
                     Get a new meme image</button>                    
