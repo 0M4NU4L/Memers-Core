@@ -1,38 +1,142 @@
-.App {
-  text-align: center;
+:root {
+  --color-base-dark: #672280;
+  --color-base-light: #A626D3;
+  --color-base-contrast: #FFFFFF;
+  --linear-background: linear-gradient(90deg, var(--color-base-dark) 0%, var(--color-base-light) 100%);
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+@import url('https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,200..800;1,200..800&display=swap');
+
+* {
+  box-sizing: border-box;
+  /* min-height: 100vh; */
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+body {
+  margin: 0;
+  font-family: 'Karla', sans-serif;
 }
 
-.App-header {
-  background-color: #282c34;
+.GridContainer {
+  width: 100%;
   min-height: 100vh;
+  display: grid;
+  grid-gap: 0px;
+  grid-template-columns: repeat(5, 20%);
+  grid-template-rows: repeat(3, auto);
+  grid-template-areas:  "H H H H H"
+                        "M M M M M"
+                        "F F F F F";
+}
+
+.header {
+  grid-area: H;
   display: flex;
-  flex-direction: column;
+  background: var(--linear-background);
+  color: var(--color-base-contrast);
+  height: 4rem;
+  align-items: center;
+  padding: 1.25rem;
+}
+
+.header--image {
+  height: 100%;
+  margin-right: 0.25rem;
+}
+
+.header--title {
+  font-size: 1.25rem;
+  margin-right: auto;
+}
+
+.header--project {
+  font-size: 0.75rem;
+  font-weight: 500;
+}
+
+main {
+  grid-area: M;
+  padding: 2rem;
+}
+
+.form {
+  display: grid;
+  grid-template: 2.5rem 2.5rem / 1fr 1fr;
+  gap: 1rem;
+}
+
+.form--label {
+  /* display: none; */
+  position: relative;
+}
+
+.form--input {
+  border-radius: 0.7rem;
+  border: 1px solid #D1D5DB;
+  text-indent: 0.7rem;
+}
+
+.form--button {
+  grid-column: 1 / -1;
+  border-radius: 0.7rem;
+  background: var(--linear-background);
+  color: var(--color-base-contrast);
+  border: none;
+  cursor: pointer;
+}
+
+.meme {
+  position: relative;
+}
+
+.meme--image {
+  max-width: 100%;
+  border-radius: 3px;
+  display: flex;
+  margin: 2rem auto;
+}
+
+.meme--text {
+  position: absolute;
+  width: 80%;
+  text-align: center;
+  left: 50%;
+  transform: translateX(-50%);
+  margin: 15px 0;
+  padding: 0 5px;
+  font-family: impact, sans-serif;
+  font-size: 2em;
+  text-transform: uppercase;
+  color: white;
+  letter-spacing: 1px;
+  text-shadow:
+      2px 2px 0 #000,
+      -2px -2px 0 #000,
+      2px -2px 0 #000,
+      -2px 2px 0 #000,
+      0 2px 0 #000,
+      2px 0 0 #000,
+      0 -2px 0 #000,
+      -2px 0 0 #000,
+      2px 2px 5px #000;
+}
+
+.bottom {
+  bottom: 0;
+}
+
+.top {
+  top: 0;
+}
+
+
+.footer {
+  grid-area: F;
+  margin-top: auto;
+  display: flex;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+  padding: 0.25rem;
+  background: var(--linear-background);
+  color: var(--color-base-contrast);
 }
