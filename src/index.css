@@ -117,13 +117,13 @@ html {
 }
 
 .meme--image {
-  max-width: 100%;
+  max-width: 40%;
   border-radius: 3px;
 }
 
 .meme--text {
   position: absolute;
-  width: 80%;
+  width: 50%;
   text-align: center;
   left: 50%;
   transform: translateX(-50%);
@@ -189,4 +189,13 @@ html {
     font-size: 0.9rem;
     padding: 0.75em;
   }
+
+  .meme--text {
+    font-size: 1.5rem;
+  }
+
+  .meme--image {
+    max-width: 100%;
+  }
 }
+  
