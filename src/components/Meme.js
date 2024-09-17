@@ -5,7 +5,7 @@ export default function Meme() {
     const [allMemes, setAllMemes] = React.useState({});
 
     const [meme, setMeme] = React.useState({
-        topText: "Why are you gay?",
+        topText: "Why so serious?",
         bottomText: "",
         randomImage: "http://i.imgflip.com/1bij.jpg"
     });
@@ -63,10 +63,10 @@ export default function Meme() {
                     value={meme.bottomText}
                 />
                 <button
-                    className="form--button"
+                    className="form--randombutton"
                     onClick={getMemeImage}
                 >
-                    Get a new meme image</button>
+                    Get a new meme image</button>                    
             </div>
             <div className="meme">
                 <img 
